@@ -24,8 +24,7 @@ def rename_id_fields(data, new_field_name="original_id"):
 
 st.set_page_config(
     page_title="JSON to SQL Converter | Transform JSON Data to SQL Server Tables",
-    page_icon="🔄",
-    description="Free tool to convert JSON data into normalized SQL Server tables and scripts. Automatically handles nested data and relationships."
+    page_icon="🔄"
 )
 
 # Add SEO metadata
@@ -183,4 +182,4 @@ with st.expander("📝 Source Code"):
 
 # Footer
 st.markdown("---")
-st.markdown("""*JSON to SQL Converter Tool | Transform nested JSON to normalized database tables""")
+st.markdown("""*JSON to SQL Converter Tool | Transform nested JSON to normalized database tables*""")
