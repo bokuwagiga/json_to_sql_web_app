@@ -1,14 +1,17 @@
 # JSON to SQL Converter
 
-A web application that converts JSON data into SQL Server table creation and insertion scripts. This tool automatically normalizes nested JSON structures into relational database tables with proper relationships.
+A web application that converts JSON data into properly normalized SQL Server database schemas. This tool automatically transforms complex nested JSON structures into a set of relational database tables with appropriate foreign key relationships, constraints, and optimized structure - not just a single denormalized table.
 
 ## Features
 
-- Converts nested JSON structures to normalized SQL Server tables
-- Automatically creates relationship tables for arrays
+- Creates fully normalized relational database schema from nested JSON structures
+- Implements proper database normalization principles (1NF, 2NF, 3NF)
+- Automatically identifies and establishes parent-child relationships between tables
+- Generates junction/bridge tables for many-to-many relationships in arrays
+- Intelligently handles complex nested objects by creating separate related tables
 - Option to rename 'id' fields to avoid conflicts with SQL Server auto-increment IDs
-- Generates complete SQL scripts with both table creation and data insertion statements
-- User-friendly web interface with customization options
+- Generates complete SQL scripts with both table creation (DDL) and data insertion (DML) statements
+- User-friendly web interface with schema customization options
 
 ## Installation
 
@@ -42,7 +45,7 @@ streamlit run json_to_sql_web_app.py
 
 ## Example
 
-The application includes a built-in example that demonstrates how nested JSON with users and orders is converted to properly normalized SQL tables with relationships.
+The application includes a built-in example that demonstrates the normalization process. It shows how complex nested JSON with users, orders, and nested properties is transformed into multiple properly normalized SQL tables with primary/foreign key relationships instead of a single denormalized table. The example demonstrates proper database design principles like avoiding data duplication and maintaining referential integrity.
 
 ## Requirements
 

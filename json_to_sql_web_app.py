@@ -22,10 +22,36 @@ def rename_id_fields(data, new_field_name="original_id"):
         return data
 
 
-st.set_page_config(page_title="JSON to SQL Converter", page_icon="🔄")
+st.set_page_config(
+    page_title="JSON to SQL Converter | Transform JSON Data to SQL Server Tables",
+    page_icon="🔄",
+    description="Free tool to convert JSON data into normalized SQL Server tables and scripts. Automatically handles nested data and relationships."
+)
 
-st.title("JSON to SQL Converter")
-st.write("Convert JSON data to SQL Server table creation and insertion scripts")
+# Add SEO metadata
+seo_html = """
+<meta name="description" content="Convert complex JSON data to normalized SQL Server tables and insert scripts. Handle nested objects, arrays, and relationships automatically.">
+<meta name="keywords" content="json to sql converter, json normalization, sql generator, database schema generator, streamlit app">
+<meta name="author" content="Your Name">
+"""
+st.markdown(seo_html, unsafe_allow_html=True)
+
+st.title("JSON to Normalized SQL Converter")
+st.write("Convert complex nested JSON data into properly normalized SQL Server database schemas")
+
+# Add a more detailed description
+st.markdown("""
+This tool automatically transforms complex nested JSON structures into a set of relational 
+database tables with appropriate foreign key relationships and constraints - not just a single 
+denormalized table.
+
+**Advanced Features:**
+- Creates fully normalized relational schema (1NF, 2NF, 3NF)
+- Automatically identifies parent-child relationships between tables
+- Generates junction/bridge tables for many-to-many relationships in arrays
+- Intelligently handles complex nested objects with separate related tables
+- Maintains proper referential integrity and avoids data duplication
+""")
 
 # Input form
 with st.form("json_converter"):
@@ -155,6 +181,6 @@ with st.expander("📝 Source Code"):
     st.markdown("[View Source Code on GitHub](https://github.com/bokuwagiga/json_to_sql)")
     st.markdown("Feel free to contribute or report issues!")
 
-# Add footer
+# Footer
 st.markdown("---")
-st.markdown("*Built with Streamlit • JSON to SQL Converter*")
+st.markdown("""*JSON to SQL Converter Tool | Transform nested JSON to normalized database tables""")
