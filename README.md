@@ -1,6 +1,10 @@
-# JSON to SQL Converter
+# JSON to Normalized SQL Converter
 
 A web application that converts JSON data into properly normalized SQL Server database schemas. This tool automatically transforms complex nested JSON structures into a set of relational database tables with appropriate foreign key relationships, constraints, and optimized structure - not just a single denormalized table.
+
+## 🌐 Live Demo
+
+Try the app online: **[https://json2sql.streamlit.app/](https://json2sql.streamlit.app/)**
 
 ## Features
 
@@ -13,7 +17,12 @@ A web application that converts JSON data into properly normalized SQL Server da
 - Generates complete SQL scripts with both table creation (DDL) and data insertion (DML) statements
 - User-friendly web interface with schema customization options
 
-## Installation
+## Quick Start
+
+### Option 1: Use the Hosted Version
+Simply visit [https://json2sql.streamlit.app/](https://json2sql.streamlit.app/) to use the app immediately without any installation.
+
+### Option 2: Run Locally
 
 1. Clone this repository or download the source code
 2. Install the required dependencies:
@@ -25,6 +34,12 @@ pip install git+https://github.com/bokuwagiga/json_to_sql.git
 
 ## Usage
 
+### Using the Hosted App
+1. Go to [https://json2sql.streamlit.app/](https://json2sql.streamlit.app/)
+2. Paste your JSON data in the text area, configure the options, and click "Generate SQL"
+3. Copy the generated SQL script or download it for use in SQL Server
+
+### Running Locally
 1. Run the Streamlit application:
 
 ```bash
