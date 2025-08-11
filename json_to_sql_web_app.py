@@ -1,7 +1,6 @@
 import streamlit as st
 import json
-from core import JsonNormalizer
-from database import SqlServerTableCreator
+from JsonToSQL import SqlServerTableCreator, JsonNormalizer
 import traceback
 
 
